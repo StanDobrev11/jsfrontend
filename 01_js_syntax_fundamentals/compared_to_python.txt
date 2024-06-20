@@ -1,0 +1,19 @@
+python                                  js
+
+a = 5                               let a = 5       variable
+b = 7                               const b = 7     constant variable     
+
+def solve(a, b):                    function solve(a, b) {
+    return a + b                        return a + b;
+                                    }
+print(solve(5, 5))                  console.log(solve(5,5))
+
+print(f"This is {a}")               console.log(`This is ${a}`) <- the `` are special! (top left)
+
+pi = 3.1415926                      const pi = 3.1415926
+print(round(pi, 2))                 console.log(pi.toFixed(2))
+
+prinf(f"{a:.2f}")                   console.log(a.toFixed(2))
+
+escaping special characters -- same '\'
+
