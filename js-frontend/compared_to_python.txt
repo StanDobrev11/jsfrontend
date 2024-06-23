@@ -92,3 +92,139 @@ while i < 10:                               while (i < 0) {
     print(i)                                    console.log(i);
     i += 1                                      i++;
                                             }
+
+ARRAYS ARRAYS ARRAYS ARRAYS ARRAYS ARRAYS ARRAYS ARRAYS ARRAYS ARRAYS ARRAYS 
+
+empty = []                                  let empty = [];
+numbers = [1, 2, 3, 4, 5, 6]                let numbers = [1, 2, 3, 4, 5, 6];
+
+not not [] -> False                         !![] -> true
+if empty: -> False                          if (empty) {} -> true
+
+numbers[-1] => 6                            numbers[numbers.length - 1] => 6
+numbers[6] => IndexError                    numbers[6] => undefined
+
+first, second, third = [1, 2, 3]            let [first, second, third] = [1, 2, 3]
+five, six = [1, 2, 3] => ValueError         let [five, six] = [1, 2, 3] => five = 1, six = 2, finish
+
+five, *rest = [1, 2, 3]                     let [five, ...restNumbers] = [1, 2, 3]
+
+for num in numbers:                         for (let num of numbers) {
+    print(num)                                  console.log(num)
+                                            }
+
+numbers.append(1)                           numbers.push(1)
+numbers.pop()                               numbers.pop()
+numbers.extend([4, 5, 6])                   numbers.push(3, 4, 5)
+
+numbers.popleft()                           numbers.shift()
+numbers.insert(0, 10)                       numbers.unshift(10)
+
+                                            // SPLICE - removing items
+                                            let numbers = [1, 2, 3, 4, 5]
+                                            let deletedElements = numbers.splice(2, 1) => [1, 2, 4, 5] 
+                                            deletedElements = numbers.splice(1, 2) => [1, 5]
+                                            console.log(deletedElements) => [2, 4]
+
+                                            //SPLICE - inserting items
+                                            let numbers = [1, 2, 5, 6]
+                                            numbers.splice(2, 0, 3, 4) -> [1, 2, 3, 4, 5, 6]
+
+                                            //SPLICE add and remove at the same time
+                                            let numbers = [1, 2, 3, 4, 5, 6]
+                                            let deletedItems = numbers.splice(2, 3, 'deleted was 3, 4 and 5') 
+                                            -> [1, 2, 'deleted was 3, 4 and 5', 6]
+
+                                            console.log(deletedElements) -> [3, 4, 5]
+
+numbers.reverse()                           numbers.reverse()
+
+print((', ').join([str(x) for x in nums]))  console.log(numbers.join(', ))
+
+numbers = [1, 2, 3, 4, 5, 6]                let numbers = [1, 2, 3, 4, 5, 6]
+new_nums = numbers[1:3]                     let newNums = numbers.slice(1, 3)
+other_nums = numbers[1:]                    let otherNums = numbers.slice(1)
+copied_nums = numbers.copy()                let copiedNums = numbers.slice()
+
+
+                                            //includes
+1 in numbers => True                        let result = numers.includes(1) => true
+4 in numbers[:2]                            numers.includes(4, 2)
+
+                                            //get element index
+letters = ['a', 'b', 'c']                   let letters = ['a', 'b', 'c']
+letters.index('a') => 0                     letters.indexOf('a')
+letters.index('dd') => ValueError           letters.indexOf('dd') => -1
+
+                                            //find specific element
+                                            let element = numbers.find(num => num === 3)
+cars = ['BMV', 'VW', 'Toyota']              let cars = ['BMV', 'VW', 'Toyota']
+list(filter(lambda x: x[0] == 'B', cars))[0]  === cars.find(car => car[0] === 'B')
+lambda function ============================= arrow function
+
+                                            cars.forEach(car => console.log(car))
+
+                                            //map
+numbers = [1, 2, 3, 4, 5]                   let numbers = [1, 2, 3, 4, 5]
+double_numbers = list(map(lambda x: x * 2, numbers))    doubleNumbers = numbers.map(x => x * 2)
+
+
+                                            //filter
+odd_numbers = list(filter(lambda x: x % 2 == 1, numbers))   oddNumbers = numbers.filter(x => x % 2 === 1)
+
+                                            //reduce
+                                            numbersSum = numbers.reduce((sum, num) => sum + num, 0)
+
+STRINGS STRINGS STRINGS STRINGS STRINGS STRINGS STRINGS STRINGS STRINGS STRINGS STRINGS STRINGS 
+
+string = "I love Python and Java"           let string = "I love Python and Java"
+index = string.index('love')                let index = string.indexOf('love')
+                                            let lastIndex = string.lastIndexOf('love') -> last string in the text
+                                            
+                                            //substring
+                                            string.substring(index, index + 4) => 'love'
+
+                                            //replace
+
+                                            //split
+
+                                            //includes
+
+                                            //repeat
+print('*' * 4)                              console.log('*'.repeat(4))
+                                            
+                                            //trim
+
+                                            //startsWith, endsWith
+
+                                            //padStart, padEnd
+                                            console.log('10'.padStart(8, 'x')) -> 8 is TOTAL CHARS
+
+REGEX REGEX REGEX REGEX REGEX REGEX REGEX REGEX REGEX REGEX REGEX REGEX REGEX REGEX REGEX REGEX REGEX 
+
+                                            //literal
+                                            let literal = /regex pattern/
+                                            let string = "I love Python and Java, love love..."
+
+                                            let pattern = /Java,/i
+
+                                            //function constructor
+                                            let patten2 = new RegExp('Java,', 'i')
+
+                                            //test pattern
+                                            pattern.test(string)
+
+                                            //exec
+                                            pattern.exec(string)
+
+                                            //string methods -> ALL and ABOVE with g flag returns ALL ITEMS
+                                            string.match(pattern)
+                                            string.matchAll(pattern) -> iterator 
+
+                                            //replace
+                                            let string = "I love Python and Java, love love..."
+                                            let newPattern = /love/g
+                                            string.replace(newPattern, 'hate')
+
+                                            
+
