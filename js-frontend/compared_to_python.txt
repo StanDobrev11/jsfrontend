@@ -228,3 +228,31 @@ REGEX REGEX REGEX REGEX REGEX REGEX REGEX REGEX REGEX REGEX REGEX REGEX REGEX RE
 
                                             
 
+FUNCTIONS FUNCTIONS FUNCTIONS FUNCTIONS FUNCTIONS FUNCTIONS FUNCTIONS FUNCTIONS 
+
+                                            //function declaration (statement)
+                                            //the function is ready to be called/invoked
+
+                                            function funcName(params) {
+                                                function-> body
+                                            }
+
+                                            invoke -> funcName()
+
+
+                                            //function expression -> calling the func in expression
+                                            //directly will return the result into the variable
+                                            //does not need to specify name of the func (anonymous)
+                                            //or with name, but it will not be used to call the function.
+                                            //Used mainly for debugging
+                                            
+                                            const someVar = function(params) {
+                                                function-> body
+                                            }
+
+                                            //arrow function - anonymous function, expression
+                                            const someVar = () => do-some-logic;
+
+                                            invoke -> someVar()
+
+                                            //default return value - undefined
