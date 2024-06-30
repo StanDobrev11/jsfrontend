@@ -256,3 +256,128 @@ FUNCTIONS FUNCTIONS FUNCTIONS FUNCTIONS FUNCTIONS FUNCTIONS FUNCTIONS FUNCTIONS
                                             invoke -> someVar()
 
                                             //default return value - undefined
+
+OBJECT & CLASSES OBJECT & CLASSES OBJECT & CLASSES OBJECT & CLASSES OBJECT & CLASSES OBJECT & CLASSES
+
+                                            //creating empty object
+                                            let person = {}
+                                            let person = {name: 'Pesho', age: 20}
+
+                                            // accessing props
+                                            person.name
+                                            person['name']
+
+                                            /adding
+                                            let anmal = {}
+                                            animal.name = 'Ivancho'
+
+                                            //dynamically assign props - using variables
+                                            let propName = 'type'
+                                            animal[propName] = 'Cat'
+
+                                            const dynamicPropName = 'fullName'
+                                            const person3 = {
+                                                [dynamicPropName] = 'Ivan Ivanov'
+                                            }
+
+                                            //METHODS 
+                                            //define method in object literal
+                                            const dog = {
+                                                name: 'Jara',
+                                                breed: 'Chihua'
+                                                age: 2,
+                                                grades = [6, 6, 5],
+                                                owner = {
+                                                    name: 'Stan',
+                                                    age: 42,
+                                                },
+                                                //can use expression or arrow function
+                                                makeSound: function() {
+                                                    console.log('Meou...')
+                                                }
+
+                                            }
+
+                                            //calling method
+                                            let methodName = 'makeSound'
+                                            cat.makeSound()
+                                            cat.['makeSound']()
+                                            cat.[methodName]()
+
+                                            cat.eat = function() {
+                                                console.log('Cat eat...')
+                                            }
+                                            cat.eat2 = () => console.log('eat 2')
+
+                                            //method notation syntax
+                                            const cat = {
+                                                name: 'cat',
+                                                makeSound() = {
+                                                    console.log('SOunding method notation')
+                                                }
+                                            }
+
+                                            //get all property names of an object
+                                            let propertyNames = Object.keys(cat)
+                                            //values
+                                            Object.values(cat)
+
+                                            /kvp
+                                            let entries = Object.entries(cat) -> [Array(2), Array(2) .... ] each array kvp
+
+                                            /passing kvp as list of arrays to construct an object
+                                            let obj = Object.fromEntries(entries)
+
+JSON JSON JSON JSON JSON JSON JSON JSON JSON JSON JSON JSON JSON JSON JSON JSON 
+                                            //convert JS object to JSON
+
+                                            convertedObj = JSON.stringify(obj)
+
+                                            //convert JSON to JS object
+                                            convertJson = JSON.parse(convertedObj)
+
+DICTIONARY DICTIONARY DICTIONARY DICTIONARY DICTIONARY DICTIONARY DICTIONARY DICTIONARY 
+
+                                            let phoneBooke = {
+                                                'Ivan': '0887123456',
+                                                'Dragan': '0887212245',
+                                                'Petkan': '0887121321',
+                                            }
+
+                                            //check item in DICTIONARY
+                                            if (phoneBook['Ivan']) {
+
+                                            }
+                                            if (phoneBook.hasOwnProperty('Ivan')) {
+
+                                            }
+
+                                            //del item
+                                            delete phoneBook['Ivan']
+
+                                            for (let name in phoneBook) { 
+
+                                            }
+
+                                            //sorting
+                                            let result = Object
+                                                            .entries(phoneBook)
+                                                            .sort((a, b) => a[0].localeCompare(b[0])) -> makeing it array
+                                            
+                                            Object.fromEntries(result) -> transfer back to object
+
+CLASS CLASS CLASS CLASS CLASS CLASS CLASS CLASS CLASS CLASS CLASS CLASS CLASS CLASS CLASS CLASS CLASS 
+
+                                            class Student {
+                                                constructor(firstName, lastName) {
+                                                    this.firstName = firstName;
+                                                    this.lastName = lastName;
+                                                }
+
+                                                greet(to) {
+                                                    console.log(`${this.firstName} says hello to ${to}`)
+                                                }
+                                            }
+
+                                            //initialize object
+                                            const studetn = new Student('Peshp', 'Ivanov')
