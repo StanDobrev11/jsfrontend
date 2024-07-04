@@ -1,0 +1,6 @@
+targeting elements:
+    1. By ID - getElementById('string') -> the ID must be UNIQUE
+    2. By class name - getElementsByClassName('string') -> returns MANY elements
+    3. By tag name - getElementsByTagName('string') -> returns MANY
+    4. By CSS selector - querySelector('WILL RETURN FIRST FOUND'), querySelectorAll()
+    

@@ -1,0 +1,3 @@
+.tbody .td:not(:last-of-type) {
+    display: block;
+}

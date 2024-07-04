@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First JS</title>
+</head>
+<body>
+    <h1>Hello JS!</h1>
+    <h2>This is so COOOL!!!!</h2>
+    <div>
+        <label for="uName">Username</label>
+        <input type="text" class="fancy" id="uName" name="username"/>
+        <!-- <input type="submit" class="fancy" value="Login"> -->
+    </div>
+    <div>
+        <label for="pass">Password</label>
+        <input type="password" class="fancy" name="password" id="pass">
+        <input type="submit" class="fancy" value="Login">
+    </div>
+    <div id="content">
+        Some text w/out tag
+        <p>Some para here</p>
+        <a href="#">About</a>
+    </div>
+    <ol id="list">
+        <li>First item</li>
+        <li>Second item</li>
+    </ul>
+    <script>
+        console.log(screen)
+        console.dir(screen)
+        console.dir(this === window) // when in general scope
+        console.dir(globalThis === window)
+        var a = 5
+        console.log(window.a)
+        console.dir(document)
+        console.dir(document.getElementsByTagName('h1'))
+    </script>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
