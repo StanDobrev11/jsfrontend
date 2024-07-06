@@ -5,6 +5,7 @@ function solve() {
     const selectToElement = document.querySelector('#selectMenuTo')
     const optionSelection = ['Binary', 'Hexadecimal']
     
+    // populate the options
     optionSelection.forEach(option => {
         const optionElement = document.createElement('option')
         optionElement.value = option.toLowerCase()
