@@ -1,0 +1,36 @@
+HTTP (Hyper Text Transfer Protocol)
+    - text-based Client-Server protocol 
+    - used for transferring WEB resources (HTML files, images, styles...)
+    - Request - Response based (first request and response bss that request)
+    
+WEB Client
+    - software, mostly browsers, capable of SENDING REQUEST and RECEIVING RESPONSE
+
+WEB Server
+    - software, capable of RECEIVING REQUEST and SENDING RESPONSE
+
+REST (Representational State Transfer)
+    - architecture for client-server communications over HTTP
+
+
+NPM - Node Package Mnager Commands:
+    - npm init -> ASKING QUESTION constructing new project, called pakage. This generates package.json. It contains metadata for the project
+    - npm init --y -> default package.json
+
+    - npm i {package-name} -> installing packages
+    - npm run {script-name} -> execute script in package.json
+
+    in pakage.json:
+        "scripts" : {
+            "start": "{package-name}"
+        }
+
+    then npm run start -> (npm start) will execute the script and will run server
+
+    - npm i (or npm install will install all dependencies)
+
+starting server in server folder terminal, right click -> Open in integrated terminal:
+node server.js
+
+in book-library - > Open in integrated, then npm install to install packages
+npm start
