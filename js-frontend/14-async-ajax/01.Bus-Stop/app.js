@@ -5,15 +5,18 @@ function getInfo() {
     const stationId = submitElement.value
     const outputElement = document.getElementById('stopName')
     const ulElement = document.getElementById('buses')
-    outputElement.textContent = ''
+
     const ulElementFragment = document.createDocumentFragment()
+
+    outputElement.textContent = ''
+    ulElement.innerHTML = ''
 
     fetch((`${busstationsUrl}/${stationId}`))
         .then(response => response.json())
         .then(data => {
             outputElement.textContent = data['name']
             
-            Object.keys(data['buses'])
+            Object.keys(data.buses)
                 .forEach(busNum => {
                     const liElement = document.createElement('li')
                     liElement.textContent = `Bus ${busNum} arrives in ${data['buses'][busNum]} minutes`
@@ -24,5 +27,5 @@ function getInfo() {
             
         })
         .catch(error => outputElement.textContent = 'Error')
-  
+
 }   
