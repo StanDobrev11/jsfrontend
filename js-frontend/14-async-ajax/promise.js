@@ -30,3 +30,22 @@ const rejectingPromise = Promise.reject('This is rejection always promise')
 console.log(rejectingPromise)
 rejectingPromise.catch((message) => {console.log(message)})
 
+// multiple parallel promises
+const createTimeoutPromise = function timeoutPromise(message, time) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(message)
+        }, time) 
+    })
+}
+
+// Promise.allSettled
+const groupPromise = Promise.all([
+    Promise.resolve('First promise'),
+    createTimeoutPromise('second promise', 3000),
+    createTimeoutPromise('third promise', 1000)
+])
+
+groupPromise.then((values) => {
+    console.log(values)
+})
